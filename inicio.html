@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - Invitación Lara XV</title>
+    <style>
+        body {
+            /* 💥 CAMBIO AQUÍ: Fondo con imagen */
+            background-image: url('assets/img/FondoInicio.jpg'); /* <-- ¡AJUSTA ESTA RUTA A TU IMAGEN! */
+            background-size: cover; /* La imagen cubrirá toda la pantalla */
+            background-position: center center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll (si la página fuera scrollable) */
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            flex-direction: column;
+            text-align: center;
+            color: white; /* El texto (h1) suele ser blanco sobre un fondo de imagen */
+            /* Opcional: una capa oscura semi-transparente para mejorar el contraste del texto */
+            position: relative; /* Necesario para el ::before */
+            z-index: 1; /* Para que el ::before esté debajo del contenido */
+        }
+        /* Capa oscura semi-transparente sobre la imagen de fondo */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Un 40% de opacidad negra */
+            z-index: -1; /* Mantiene esta capa debajo del contenido */
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 60px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra más fuerte para texto blanco */
+            color: white; /* Aseguramos que el título sea blanco */
+        }
+
+        #enter-button {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            padding: 15px 40px;
+            background-image: url('assets/img/btn_fondo.jpg'); /* <-- Ruta de imagen de tu botón */
+            background-size: cover; 
+            background-position: center;
+            color: white; 
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            background-blend-mode: multiply; 
+            background-color: rgba(0, 0, 0, 0.3); 
+        }
+
+        #enter-button:hover {
+            background-color: rgba(0, 0, 0, 0.1); 
+            transform: scale(1.05);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Invitación Lara XV</h1>
+    <button id="enter-button" onclick="window.location.href='./index.html'">
+        Entrar
+    </button>
+</body>
+</html>

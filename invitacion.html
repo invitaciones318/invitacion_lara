@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Invitacion 15 años Lara - Elegante</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Prata&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body onload="startInvitation()"> 
+    <audio id="background-music" loop>
+        <source src="assets/audio/musica_fondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div id="music-control">
+        <button id="music-toggle" onclick="toggleMusic()">
+            <i id="music-icon" class="bi bi-volume-mute-fill"></i>
+        </button>
+    </div>
+
+    <section id="presentacion" class="d-flex align-items-center" data-aos="fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">Lara XV</h3>
+                    <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+                        En este cuento de hadas, hoy me toca a mi sentirme como una princesa...<p>Pero en mi sueño encantado todos son protagonistas de este cuento feliz, inolvidable y magico</p>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+
+        <section id="fixed-photos" class="content-card" data-aos="fade-up">
+            <div class="container">
+                <div class="section-title">
+                     
+                </div>
+                <div class="row image-grid justify-content-center">
+
+                    <div class="col-lg-6 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/lara1.jpg" class="img-fluid fixed-img" alt="Foto Fija 1 de Lara">
+                            <div class="portfolio-info">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/lara2.jpg" class="img-fluid fixed-img" alt="Foto Fija 2 de Lara">
+                            <div class="portfolio-info">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="content-card" data-aos="fade-up">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Salón de Eventos Luz Y Fuerza</h2>
+                    <p>Avenida 74 y Rivera<br> Necochea, Buenos Aires</p>
+                    <div class="map-container">
+                        <div class="map-wrapper">
+                            <iframe class="mapa"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49935.46608690792!2d-58.799858093261705!3d-38.53453737998721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958f962da74dd6c3%3A0x60f5ec6347537117!2sluz%20y%20fuerza%20NECOCHEA!5e0!3m2!1ses-419!2sar!4v1759807691051!5m2!1ses-419!2sar" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="counts" class="content-card" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center section-title">
+                        <h2>Cuenta Regresiva</h2>
+                    </div>
+                </div>
+                <div class="row" id="countdown-wrapper">
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div class="countdown-container">
+                            <div class="countdown-item">
+                                <i class="bi bi-calendar-date"></i>
+                                <span id="days" class="countdown-number"></span>
+                                <span class="countdown-label">días</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div class="countdown-container">
+                            <div class="countdown-item">
+                                <i class="bi bi-clock"></i>
+                                <span id="hours" class="countdown-number"></span>
+                                <span class="countdown-label">horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div class="countdown-container">
+                            <div class="countdown-item">
+                                <i class="bi bi-stopwatch"></i>
+                                <span id="minutes" class="countdown-number"></span>
+                                <span class="countdown-label">minutos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div class="countdown-container">
+                            <div class="countdown-item">
+                                <i class="bi bi-alarm"></i>
+                                <span id="seconds" class="countdown-number"></span>
+                                <span class="countdown-label">segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+        <section id="Dress" class="content-card" data-aos="fade-up">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="content col-xl-8 col-lg-10 d-flex align-items-stretch text-center">
+                        <div class="content w-100 section-title">
+                           <img src="assets/img/vestido-de-novia.png" class="img-fluid gift-icon-size" alt="vestido"> 
+                          <h3 class="mb-4">DRESS CODE</h3>
+                            <p>
+                                Elegante Sport
+                            </p>
+                           <img src="assets/img/tarjeta-de-regalo.png" class="img-fluid gift-icon-size" alt="regalo">
+                            <h3 class="mb-4">REGALOS</h3> 
+                            <p>
+                                El mejor regalo es tu presencia, pero si queres llevar un presente, en el salon habra una urna 
+                            </p>
+        <section id="confirmacion" class="content-card" data-aos="fade-up">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="content col-xl-8 col-lg-10 d-flex align-items-stretch text-center">
+                        <div class="content w-100 section-title">
+                            <h3 class="mb-4">Confirmá tu Asistencia</h3>
+                            <p>
+                                Tu presencia es esencial. Por favor, confirmá tu asistencia antes del 14 de Octubre en el
+                                siguiente enlace de WhatsApp:
+                            </p>
+                            <a href="https://api.whatsapp.com/send?phone=5492262609300&text=Hola%20Lara%2C%20confirmo%20mi%20asistencia%20a%20tus%2015%20a%C3%B1os."
+                                class="whatsapp-link">
+                                Confirmar por Whatsapp <i class="bx bxl-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-line" class="text-center py-5" data-aos="zoom-in">
+            <div class="container">
+                <p style="font-size: 20px; font-weight: bold; margin: 0;">
+                    Cada sonrisa, cada abrazo y cada momento de esta noche quedara en mi corazon.
+                </p>
+                <p style="font-size: 20px; font-weight: bold; margin: 0;">
+                    Gracias por formar parte de mi historia
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // **FECHA DE CUMPLEAÑOS: 8 de noviembre de 2025 a las 21:00 horas**
+        var targetDate = new Date("november 8, 2025 21:00:00").getTime();
+
+        var countdownTimer = setInterval(function () {
+            // Lógica de cuenta regresiva... (sin cambios)
+            var now = new Date().getTime();
+            var timeRemaining = targetDate - now;
+
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            if (document.getElementById("days")) document.getElementById("days").textContent = days;
+            if (document.getElementById("hours")) document.getElementById("hours").textContent = hours;
+            if (document.getElementById("minutes")) document.getElementById("minutes").textContent = minutes;
+            if (document.getElementById("seconds")) document.getElementById("seconds").textContent = seconds;
+
+            if (timeRemaining < 0) {
+                clearInterval(countdownTimer);
+                if (document.getElementById("countdown-wrapper")) {
+                    document.getElementById("countdown-wrapper").innerHTML = '<div class="col-12 text-center"><h2 class="text-dark">¡El evento ha comenzado!</h2></div>';
+                }
+            }
+        }, 1000);
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const music = document.getElementById('background-music');
+        const icon = document.getElementById('music-icon');
+        let isPlaying = false; 
+        
+        // Inicializa AOS al cargar la página
+        AOS.init({
+            duration: 3000, 
+            once: true 
+        });
+
+        // Función para Iniciar la Invitación, Música y Animaciones
+        // Se llama automáticamente cuando el body carga (ver <body onload="...">)
+        function startInvitation() {
+            // 1. Mostrar todo el contenido de la invitación (body.invitation-visible)
+            document.body.classList.add('invitation-visible');
+            
+            // 2. Iniciar Música
+            const playPromise = music.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isPlaying = true;
+                    icon.className = 'bi bi-volume-up-fill';
+                }).catch(error => {
+                    music.pause();
+                    isPlaying = false;
+                    icon.className = 'bi bi-volume-mute-fill';
+                });
+            }
+
+            // 3. Forzar las animaciones AOS de la sección de presentación
+            AOS.refresh(); 
+
+            // 4. Scroll a la sección 'presentacion' después de un breve momento
+            setTimeout(() => {
+                document.getElementById('presentacion').scrollIntoView({ behavior: 'smooth' });
+            }, 500); 
+        }
+
+        // Lógica del botón flotante de música (sin cambios)
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                icon.className = 'bi bi-volume-mute-fill';
+            } else {
+                music.play();
+                icon.className = 'bi bi-volume-up-fill';
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
+</body>
+
+</html>
